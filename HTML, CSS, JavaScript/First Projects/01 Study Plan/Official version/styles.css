@@ -1,0 +1,924 @@
+/* =========================================================
+   PALETA (tomada de la referencia)
+   -----------------------------------------------------------
+   Rojo     -> titulos
+   Amarillo -> texto
+   Azul     -> botones
+   Si quieres cambiar un color, solo modificalo aqui.
+   ========================================================= */
+
+:root {
+    --rojo: #E5483A;
+    --amarillo: #F2B33D;
+    --azul: #4A98AA;
+    --azul-claro: #6FB6C7;
+    --fondo-oscuro: #0C1C24;
+    --panel: rgba(12, 28, 36, 0.9);
+    --resplandor-azul: rgba(111, 182, 199, 0.55);
+    --resplandor-rojo: rgba(229, 72, 58, 0.6);
+}
+
+html {
+    overflow-x: hidden;
+    color: var(--amarillo);
+    background-color: var(--fondo-oscuro);
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    /* En celulares con "notch" el contenido no queda tapado */
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+    font-family: Arial, sans-serif;
+    /* El texto crece suavemente: ~16px en celular, ~18px en monitor grande */
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+    line-height: 1.55;
+    text-align: center;
+    overflow-x: hidden;
+    color: var(--amarillo);
+}
+
+/* Imagen de fondo fija (funciona tambien en celulares/iOS).
+   Guarda tu imagen como img/fondo.jpg o cambia la ruta de abajo. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--fondo-oscuro);
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2 {
+    color: var(--rojo);
+    overflow-wrap: break-word;
+}
+
+a {
+    color: var(--azul-claro);
+}
+
+hr {
+    color: var(--rojo);
+    clear: both;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   IMAGENES
+   -----------------------------------------------------------
+   Todas las imagenes de los temas estan dentro de un <button>.
+   Aqui se centran SIEMPRE (tambien despues de hacer clic y
+   cambiar el src con JavaScript) y nunca se salen de la
+   pantalla, sin importar el tamaño de la imagen nueva.
+   Cada imagen define su ancho con --ancho-imagen (ver abajo).
+   ========================================================= */
+
+button img {
+    display: block;
+    margin: 0 auto;
+    width: var(--ancho-imagen, 300px);
+    max-width: min(100%, calc(100vw - 7rem));
+    max-height: 80vh;
+    object-fit: contain;
+    transition: scale 0.3s ease, filter 0.3s ease;
+}
+
+/* ---------- Foto de perfil ----------
+   Al inicio se ve como "pildora" ancha. Al hacer clic cambia a la
+   foto de Spiderman con su celular (img/Perfil.jpg, que es cuadrada):
+   se muestra completa, con esquinas redondeadas y marco rojo. */
+.imagen-perfil {
+    --ancho-imagen: 400px;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-radius: 200px;
+    transition: width 0.6s ease, border-radius 0.6s ease, aspect-ratio 0.6s ease, box-shadow 0.6s ease, scale 0.3s ease, filter 0.3s ease;
+}
+
+.imagen-perfil.imagen-perfil-retrato {
+    --ancho-imagen: min(380px, 70vh);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 18%;
+    border-radius: 26px;
+    box-shadow: 0 0 0 3px var(--rojo), 0 14px 30px rgba(0, 0, 0, 0.55);
+}
+
+.imagen-python-inicio {
+    --ancho-imagen: 300px;
+}
+
+/* ===== Ancho de cada imagen de tema ===== */
+.imagen-python-inicio {
+    --ancho-imagen: 300px;
+}
+
+.imagen-lenguajes-programacion {
+    --ancho-imagen: 500px;
+}
+
+.imagen-tecnologias-front-end {
+    --ancho-imagen: 190px;
+}
+
+.imagen-procesadores-css {
+    --ancho-imagen: 200px;
+}
+
+.imagen-frameworks-front-end {
+    --ancho-imagen: 190px;
+}
+
+.imagen-back-end {
+    --ancho-imagen: 190px;
+}
+
+.imagen-apis {
+    --ancho-imagen: 190px;
+}
+
+.imagen-bases-datos {
+    --ancho-imagen: 400px;
+}
+
+.imagen-diseno-bases-datos {
+    --ancho-imagen: 190px;
+}
+
+.imagen-uml-modelado {
+    --ancho-imagen: 400px;
+}
+
+.imagen-git {
+    --ancho-imagen: 400px;
+}
+
+.imagen-linux {
+    --ancho-imagen: 250px;
+}
+
+.imagen-terminal {
+    --ancho-imagen: 190px;
+}
+
+.imagen-sistemas-operativos {
+    --ancho-imagen: 400px;
+}
+
+.imagen-contenedores {
+    --ancho-imagen: 250px;
+}
+
+.imagen-cloud {
+    --ancho-imagen: 400px;
+}
+
+.imagen-testing {
+    --ancho-imagen: 400px;
+}
+
+.imagen-python {
+    --ancho-imagen: 440px;
+}
+
+.imagen-javascript {
+    --ancho-imagen: 190px;
+}
+
+.imagen-typescript {
+    --ancho-imagen: 190px;
+}
+
+.imagen-xml {
+    --ancho-imagen: 190px;
+}
+
+.imagen-json {
+    --ancho-imagen: 190px;
+}
+
+.imagen-yaml {
+    --ancho-imagen: 190px;
+}
+
+.imagen-erp {
+    --ancho-imagen: 190px;
+}
+
+.imagen-desarrollo-web {
+    --ancho-imagen: 190px;
+}
+
+.imagen-seguridad {
+    --ancho-imagen: 190px;
+}
+
+.imagen-algoritmos {
+    --ancho-imagen: 400px;
+}
+
+.imagen-estructuras-datos {
+    --ancho-imagen: 245px;
+}
+
+.imagen-arquitectura-software {
+    --ancho-imagen: 300px;
+}
+
+.imagen-patrones-diseno {
+    --ancho-imagen: 310px;
+}
+
+.imagen-buenas-practicas {
+    --ancho-imagen: 300px;
+}
+
+.imagen-herramientas {
+    --ancho-imagen: 430px;
+}
+
+.imagen-automatizacion {
+    --ancho-imagen: 220px;
+}
+
+.imagen-apis-terceros {
+    --ancho-imagen: 440px;
+}
+
+.imagen-comunicacion {
+    --ancho-imagen: 220px;
+}
+
+.imagen-redes {
+    --ancho-imagen: 260px;
+}
+
+.imagen-desarrollo-profesional {
+    --ancho-imagen: 600px;
+}
+
+/* Imagenes sueltas del HTML */
+.imagen-aprende-programar {
+    --ancho-imagen: 200px;
+}
+
+#foto-pensamiento {
+    width: auto;
+    height: 45px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+#imagen-mensaje-oculto {
+    --ancho-imagen: 240px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Video "Hola Mundo" (es vertical 9:16) */
+.video-hola-mundo {
+    display: block;
+    margin: 1rem auto;
+    width: min(320px, 100%);
+    max-height: 85vh;
+    aspect-ratio: 480 / 854;
+    background: #000;
+    border: 2px solid var(--azul);
+    border-radius: 10px;
+}
+
+/* Cuadro para escribir un pensamiento (16px evita el zoom automatico en iPhone) */
+textarea {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: min(calc(100% - 4rem), 360px);
+    padding: 0.6rem 0.8rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--fondo-oscuro);
+    background: #f4fbfd;
+    border: 2px solid var(--azul);
+    border-radius: 12px;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--amarillo);
+    box-shadow: 0 0 0 4px rgba(242, 179, 61, 0.35);
+}
+
+/* ===== Titulos y notas de cada lista =====
+   Todos los titulos "titulo-lista-..." comparten el mismo estilo (rojo),
+   las "nota-lista-..." (Se recomiendan, Opcionales...) van en amarillo
+   y todas las "lista-..." comparten el estilo de lista. */
+[class^="titulo-lista-"],
+[class^="nota-lista-"] {
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem auto;
+}
+
+[class^="titulo-lista-"] {
+    color: var(--rojo);
+}
+
+[class^="nota-lista-"] {
+    color: var(--amarillo);
+}
+
+[class^="lista-"] {
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+    font-weight: bold;
+    margin: 1rem auto;
+}
+
+/* El cambio de color de las listas y textos es suave, no de golpe */
+[class^="lista-"],
+.descripcion-personal,
+.perfil-carrera,
+.descripcion-programacion {
+    transition: color 0.6s ease;
+}
+
+/*Cuerpo de la página*/
+
+header {
+    background-color: var(--panel);
+    color: var(--amarillo);
+    padding: clamp(1.5rem, 5vw, 3rem) 1rem;
+    border-bottom: 2px solid var(--rojo);
+}
+
+header h1 {
+    font-size: clamp(1.6rem, 7vw, 4rem);
+    margin: 0;
+}
+
+/* Contenido principal: centrado y con ancho maximo para que
+   no se estire demasiado en monitores grandes */
+#contenido-principal > section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0.75rem;
+}
+
+section article {
+    transition: box-shadow 1s ease;
+    background-color: var(--panel);
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(74, 152, 170, 0.5);
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+}
+
+section article p {
+    max-width: 70ch;
+    margin: 1rem auto;
+    overflow-wrap: anywhere; /* evita que los links largos se salgan de la pantalla */
+}
+
+section article li {
+    overflow-wrap: anywhere;
+}
+
+section article:hover {
+    box-shadow: 0 0 1rem var(--resplandor-rojo);
+}
+
+.saludo-bienvenida {
+    font-size: 1.15rem;
+    max-width: 60rem;
+    margin: 20px auto;
+    padding: 0 1rem;
+}
+
+#titulo-eugv {
+    color: var(--rojo);
+    font-size: 1.75rem;
+    margin-top: 20px;
+}
+
+.descripcion-personal {
+    font-size: 1rem;
+    margin: 10px auto;
+}
+
+.descripcion-carrera {
+    font-size: 1.2rem;
+    margin: 10px auto;
+}
+
+/*Listas*/
+
+#titulo-temas-estudio {
+    color: var(--rojo);
+}
+
+/*Final de la página*/
+
+.descripcion-final {
+    font-size: 1.15rem;
+    color: var(--amarillo);
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--panel);
+    border-top: 2px solid var(--rojo);
+    padding: clamp(1.5rem, 5vw, 3rem) 1rem;
+    color: var(--amarillo);
+}
+
+footer section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    display: inline-block;
+    padding: 0.4rem 0.2rem;
+    transition: color 0.4s ease, translate 0.25s ease;
+    color: var(--amarillo);
+}
+
+footer a:active {
+    translate: 0 2px;
+}
+
+@media (hover: hover) {
+    footer a:hover {
+        color: var(--azul-claro);
+        translate: 0 -2px;
+    }
+}
+
+/* =========================================================
+   PANTALLA DE INICIO (logo de EUGV + "Haz click para iniciar")
+   ========================================================= */
+
+#contenido-principal {
+    display: none;
+}
+
+#contenido-principal:target {
+    display: block;
+}
+
+#contenido-principal:target ~ #pantalla-inicio {
+    display: none;
+}
+
+/* Si el enlace "Volver al comienzo" (#titulo-principal) cambia la direccion,
+   el contenido se mantiene visible en lugar de volver al inicio. */
+#contenido-principal:has(:target) {
+    display: block;
+}
+
+#contenido-principal:has(:target) ~ #pantalla-inicio {
+    display: none;
+}
+
+/* Animacion al entrar: el contenido sube y aparece suavemente */
+#contenido-principal:target {
+    animation: entrada-contenido 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+#contenido-principal:has(:target) {
+    animation: entrada-contenido 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+#pantalla-inicio {
+    background-color: var(--panel);
+    color: var(--amarillo);
+    min-height: 100vh;
+    min-height: 100dvh;
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-inicio {
+    /* Crece con la pantalla: 170px en celular chico, hasta 320px en monitor */
+    width: clamp(170px, 40vw, 320px);
+    margin: auto;
+    transition: scale 0.6s ease, border-radius 0.6s ease;
+    animation: flotar-logo 4.5s ease-in-out infinite;
+}
+
+@media (hover: hover) {
+    .logo-inicio:hover {
+        scale: 1.08;
+        border-radius: 50%;
+    }
+}
+
+#pantalla-inicio h1 {
+    font-size: clamp(1.7rem, 6vw, 3rem);
+    margin: 1.5rem 0;
+}
+
+/* Boton */
+.boton-inicio {
+    display: inline-block;
+    background-color: var(--azul);
+    color: var(--fondo-oscuro);
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.5s ease, scale 0.3s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+    animation: pulso-boton-inicio 2.6s ease-in-out infinite;
+}
+
+@media (hover: hover) {
+    .boton-inicio:hover {
+        background-color: var(--azul-claro);
+        scale: 1.06;
+        border-radius: 30px;
+        box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.6), 0 0 1.2rem var(--resplandor-azul);
+    }
+}
+
+.boton-inicio:active {
+    scale: 0.95;
+    background-color: var(--azul-claro);
+}
+
+/*Botones: Descripciones de temas, mensajes informativos en GENERAL*/
+
+button {
+    --margen-boton: 0.9rem;
+    position: relative;
+    overflow: hidden; /* la onda del clic no se sale del boton */
+    margin: var(--margen-boton);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: bold;
+    border: 0px solid;
+    outline: none;
+    background-color: var(--azul);
+    color: var(--fondo-oscuro);
+    cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.3s ease, translate 0.25s ease, transform 0.15s ease;
+
+    /* Que el texto largo ("¿Cómo se desarrolla?", "¿Qué son los DevOps?")
+       baje de renglon en vez de salirse de la pantalla */
+    white-space: normal;
+    max-width: calc(100% - 2 * var(--margen-boton));
+
+    /* Zona comoda para tocar con el dedo (botones de solo emoji incluidos) */
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+
+    /* Sin retraso de doble toque ni destello gris en celulares */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover solo en dispositivos con mouse (evita que se quede "pegado" al tocar) */
+@media (hover: hover) {
+    button:hover {
+        background-color: var(--azul-claro);
+        translate: 0 -3px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45), 0 0 14px var(--resplandor-azul);
+    }
+
+    button:hover img {
+        scale: 1.04;
+    }
+}
+
+button:active {
+    background-color: var(--azul-claro);
+    transform: scale(0.94);
+    translate: 0 0;
+    box-shadow: none;
+}
+
+/* Boton que contiene una imagen: marco mas ajustado */
+button:has(> img) {
+    padding: 0.5rem;
+}
+
+/* Accesibilidad: se ve que boton esta seleccionado al usar el teclado */
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--amarillo);
+    outline-offset: 3px;
+}
+
+/* =========================================================
+   ANIMACIONES DE CLIC
+   -----------------------------------------------------------
+   Las clases las pone app.js (seccion "ANIMACIONES DE CLIC"):
+   boton-animado   -> rebote del boton al hacer clic
+   onda-clic       -> onda que sale desde donde tocas
+   imagen-nueva    -> la imagen nueva aparece con zoom y enfoque
+   texto-revelado  -> el texto nuevo sube y aparece con brillo
+   color-cambiado  -> la lista que cambia de color da un destello
+   ========================================================= */
+
+/* Rebote del boton (con resorte) */
+.boton-animado {
+    animation: rebote-boton 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Si el boton tiene una imagen, el rebote lo hace la imagen */
+.boton-animado:has(> img) {
+    animation: rebote-boton-suave 0.55s ease;
+}
+
+.boton-animado > img {
+    animation: pop-imagen 0.55s ease;
+}
+
+/* Onda que se expande desde el punto del clic */
+.onda-clic {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.55);
+    transform: scale(0);
+    pointer-events: none;
+    animation: onda-clic 0.65s ease-out forwards;
+}
+
+/* Imagen nueva despues de cambiar el src */
+button img.imagen-nueva {
+    animation: imagen-nueva 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* Texto que aparece al presionar un boton */
+.texto-revelado {
+    animation: texto-revelado 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* Lista o texto que cambia de color */
+.color-cambiado {
+    animation: destello-color 0.8s ease;
+}
+
+@keyframes rebote-boton {
+    0%   { transform: scale(1); }
+    20%  { transform: scale(0.88); }
+    55%  { transform: scale(1.08); }
+    80%  { transform: scale(0.97); }
+    100% { transform: scale(1); }
+}
+
+@keyframes rebote-boton-suave {
+    0%   { transform: scale(1); }
+    25%  { transform: scale(0.96); }
+    60%  { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pop-imagen {
+    0%   { transform: scale(1) rotate(0deg); filter: brightness(1); }
+    25%  { transform: scale(0.86) rotate(-3deg); filter: brightness(1.4); }
+    55%  { transform: scale(1.06) rotate(2deg); }
+    80%  { transform: scale(0.98) rotate(-1deg); }
+    100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+}
+
+@keyframes onda-clic {
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes imagen-nueva {
+    from {
+        opacity: 0;
+        transform: scale(0.78) rotateY(-28deg);
+        filter: blur(8px) brightness(1.6);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05) rotateY(4deg);
+        filter: blur(0) brightness(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+
+@keyframes texto-revelado {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.97);
+        text-shadow: 0 0 16px rgba(242, 179, 61, 0.95);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+        text-shadow: 0 0 0 transparent;
+    }
+}
+
+@keyframes destello-color {
+    0%   { transform: scale(1); text-shadow: 0 0 0 transparent; }
+    40%  { transform: scale(1.05); text-shadow: 0 0 16px currentColor; }
+    100% { transform: scale(1); text-shadow: 0 0 0 transparent; }
+}
+
+@keyframes entrada-contenido {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes flotar-logo {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -10px; }
+}
+
+@keyframes pulso-boton-inicio {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(111, 182, 199, 0.55); }
+    50%      { box-shadow: 0 0 0 14px rgba(111, 182, 199, 0); }
+}
+
+/* =========================================================
+   RESPONSIVE
+   -----------------------------------------------------------
+   Las imagenes ya se centran y se adaptan en cualquier
+   pantalla (ver seccion IMAGENES). Aqui se afinan espacios
+   y tamaños: monitores grandes, tablets, celulares, celulares
+   chicos y celulares en horizontal.
+   ========================================================= */
+
+/* Monitores grandes y TV */
+@media (min-width: 1500px) {
+
+    #contenido-principal > section {
+        max-width: 1240px;
+    }
+
+    section article p {
+        max-width: 75ch;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #titulo-eugv {
+        font-size: 1.5rem;
+    }
+
+    .descripcion-carrera {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #contenido-principal > section {
+        padding: 0 0.5rem;
+    }
+
+    section article {
+        padding: 0.25rem 0.75rem;
+    }
+
+    .saludo-bienvenida,
+    .descripcion-carrera {
+        font-size: 1rem;
+    }
+
+    .imagen-perfil {
+        --ancho-imagen: 280px;
+    }
+
+    .imagen-perfil.imagen-perfil-retrato {
+        --ancho-imagen: min(300px, 70vh);
+    }
+
+    button {
+        --margen-boton: 0.45rem;
+        font-size: 1.05rem;
+        padding: 0.6rem 1rem;
+    }
+
+    button:has(> img) {
+        padding: 0.4rem;
+    }
+
+    button img {
+        max-width: min(100%, calc(100vw - 5.5rem));
+    }
+
+    .boton-inicio {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+    }
+
+    footer section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .logo-inicio {
+        width: 140px;
+    }
+
+    .imagen-perfil {
+        --ancho-imagen: 220px;
+    }
+
+    .imagen-perfil.imagen-perfil-retrato {
+        --ancho-imagen: min(240px, 70vh);
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 0.55rem 0.85rem;
+    }
+}
+
+/* Celulares en horizontal (poca altura) */
+@media (max-height: 480px) and (orientation: landscape) {
+
+    header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    #pantalla-inicio {
+        padding: 1rem;
+    }
+
+    .logo-inicio {
+        width: 110px;
+    }
+
+    #pantalla-inicio h1 {
+        margin: 0.8rem 0;
+    }
+}
+
+/* Si el sistema pide "reducir movimiento", se quitan las animaciones */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .onda-clic {
+        display: none;
+    }
+}

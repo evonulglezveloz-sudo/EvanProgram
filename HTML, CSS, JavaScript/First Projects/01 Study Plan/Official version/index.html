@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0C1C24">
+    <link rel="stylesheet" href="styles.css">
+    <title>E.U.G.V 🧑‍💻</title>
+</head>
+<body>
+    <div id="contenido-principal">
+        <header>
+            <div>
+            <h1 id="titulo-principal">PLAN DE ESTUDIOS</h1>
+            </div>
+        </header>
+        <div>
+            <p class="saludo-bienvenida">Bienvenid@ a mi "PLAN DE ESTUDIOS", donde les comparto los conocimientos sobre la <strong>"Programación"</strong> y el <strong>"Desarrollo de Software"</strong>  que se deben adquirir para ser un buen Ingeniero de Software.</p>
+        </div>
+        <section>
+            <article>
+                <h2 id="titulo-eugv">E.U.G.V.</h2>
+                <button onclick="mostrarUsuarioGitHub()">Encuentrame en GitHub</button>
+                <p id="usuario-github"></p>
+                <br>
+                <button onclick="cambiarImagenPerfil()"><img src="https://i.pinimg.com/736x/e4/b8/27/e4b827668c8c74108ee2c50411b05722.jpg" alt="Evan Ulises González Veloz" class="imagen-perfil"></button>
+                <p class="fuente-imagen-perfil"></p>
+                <button onclick="cambiarColorDescripcionPersonal()">📱</button>
+                <p class="descripcion-personal">Soy Evan Ulises González Veloz, tengo 17 años. Estudiante de Ingenieria en Desarrollo de Software.</p>
+                <hr>
+                <p class="descripcion-carrera">La <strong>"Ingeniería en Desarrollo de Software"</strong> forma profesionales capaces de diseñar, desarrollar y mantener soluciones tecnológicas innovadoras, con enfoque ético, colaborativo y orientado a la mejora de procesos y la sociedad.</p>
+                <button onclick="cambiarColorPerfilCarrera()">🧑‍💻+🌐</button>
+                <p class="perfil-carrera"><strong>Perfil de la carrera:</strong>
+                La carrera se centra en el desarrollo de software para aplicaciones web, móviles y sistemas empresariales, utilizando tecnologías de vanguardia y metodologías ágiles.</p>
+            </article>
+            <article>
+                <h2 id="titulo-programacion">Programación</h2>
+                <button onclick="cambiarImagenPythonInicio()"><img src="https://tse4.mm.bing.net/th/id/OIP.mcDM32dcz8M_EliALCY1JAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo de Python" class="imagen-python-inicio"></button>
+                <p class="fuente-imagen-python-inicio"></p>
+                <p class="descripcion-programacion">La programación refiere a la acción de crear programas o aplicaciones a través del desarrollo de un código fuente, que se basa en el conjunto de instrucciones que sigue el ordenador para ejecutar un programa. "La programacion es un <strong>arte</strong> maravillosa".</p>
+                <button onclick="mostrarMensajeArteProgramacion()">P =</button>
+                <p id="mensaje-arte-programacion"></p>
+                <p>POV: Cuando haces "Hola Mundo"</p>
+                <video class="video-hola-mundo" src="img/Hola-mundo-en-diferentes-lenguajes-de-pr_33.mp4" controls playsinline preload="metadata" title="Hola Mundo">Tu navegador no puede reproducir este video.</video>
+                <hr>
+                <h2 id="titulo-temas-estudio">"Temas, Tecnologias, Lenguajes de Programación y más por estudiar"</h2>
+                <button onclick="mostrarMensajePractica()">⟶</button>
+                <p id="mensaje-practica"></p>
+                <p>¡Si te gustan las imagenes, te dejare el link!</p>
+            <hr>
+            <button onclick="cambiarImagenLenguajesProgramacion()"><img src="https://www.microscopio.pro/wp-content/uploads/iconos-de-diferentes-lenguajes-de-programacion.png" alt="Imagen de lenguajes de programación" class="imagen-lenguajes-programacion" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-lenguajes-programacion"></p>
+            <p class="titulo-lista-lenguajes-programacion">1. Lenguajes de Programación:</p>
+            <ul class="lista-lenguajes-programacion">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
+            <button onclick="mostrarMensajeLenguajes()">💻</button>
+            <p id="mensaje-lenguajes"></p>
+            <button onclick="cambiarColorListaLenguajesProgramacion()">🔓</button>
+            <p class="nota-lista-lenguajes-recomendados">Se recomiendan:</p>
+            <ul class="lista-lenguajes-recomendados">
+                <li>Java</li>
+                <li>C#</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>Go(Golang)</li>
+                <br>
+                <button onclick="cambiarColorListaLenguajesRecomendados()">🕵️‍♂️</button>
+            </ul>
+            <p class="nota-lista-lenguajes-opcionales">Opcionales, pero útiles:</p>
+            <ul class="lista-lenguajes-opcionales">
+                <li>PHP</li>
+                <li>Rust</li>
+                <li>Swift</li>
+                <li>Kotlin</li>
+                <br>
+                <button onclick="cambiarColorListaLenguajesOpcionales()">👾</button>
+            </ul>
+            <hr>
+            <button onclick="cambiarImagenTecnologiasFrontEnd()"><img src="https://www.pngitem.com/pimgs/m/519-5191896_pofolio-website-html-css-javascript-logo-png-transparent.png" alt="Imagen de tecnologías Front-End" class="imagen-tecnologias-front-end" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-tecnologias-front-end"></p>
+            <p class="titulo-lista-tecnologias-front-end">2. Tecnologias Front-End:</p>
+            <ul class="lista-tecnologias-front-end">
+                <li class="item-html-css-inicio">HTML y CSS</li>
+                <li>Flexbox</li>
+                <li>CSS Grid</li>
+                <li>Responsive Desing</li>
+                <li>Media Queries</li>
+                <li>Animaciones CSS</li>
+                <li>Variables CSS</li>
+                <li>Accesibilidad (Accessibility)</li>
+                <li>SEO básico</li>
+                <br>
+                <button onclick="mostrarTemaPorDondeEmpezarFrontEnd()">Por donde empezar?</button> <button onclick="cambiarColorListaTecnologiasFrontEnd()">📱</button>
+                <p class="tema-inicio-front-end"></p>
+            </ul>
+            <button onclick="mostrarDescripcionTecnologiasFrontEnd()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-tecnologias-front-end"></p>
+            <hr>
+            <button onclick="cambiarImagenProcesadoresCss()"><img src="https://tse4.mm.bing.net/th/id/OIP.n53ihRvP5_UehhhckTCTBQAAAA?r=0&w=224&h=280&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de procesadores CSS" class="imagen-procesadores-css" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-procesadores-css"></p>
+            <p class="titulo-lista-procesadores-css">3. Procesadores CSS</p>
+            <ul class="lista-procesadores-css">
+                <li class="item-procesador-css">SASS</li>
+                <li class="item-procesador-css">LESS</li>
+            </ul>
+            <button onclick="mostrarDescripcionProcesadoresCss()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-procesadores-css"></p>
+            <button onclick="cambiarColorListaProcesadoresCss()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenFrameworksFrontEnd()"><img src="https://tse4.mm.bing.net/th/id/OIP.pesyXfSd5QHE36b-PuRFLQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de frameworks y librerías Front-End" class="imagen-frameworks-front-end" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-frameworks-front-end"></p>
+            <p class="titulo-lista-frameworks-front-end">4. Frameworks y librerías Front-End</p>
+            <ul class="lista-frameworks-front-end">
+                <li class="item-framework">React</li>
+                <li class="item-framework">Next.js</li>
+                <li class="item-framework">Vue.js</li>
+                <li class="item-framework">Angular</li>
+                <li class="item-framework">Vite</li>
+                <li class="item-framework">Tailwind CSS</li>
+                <li class="item-framework">Bootstrap</li>
+                <br>
+                <button onclick="mostrarRespuestaCualEscoger()">¿Cuál escoger?</button>
+                <p class="respuesta-cual-escoger"></p>
+            </ul>
+            <button onclick="mostrarDescripcionFrameworksFrontEnd()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-frameworks-front-end"></p>
+            <button onclick="cambiarColorListaFrameworksFrontEnd()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenBackEnd()"><img src="https://tse2.mm.bing.net/th/id/OIP.oMEywsVtvCtwex027JjCuwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de Back-End" class="imagen-back-end" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-back-end"></p>
+            <p class="titulo-lista-back-end">5. Back-End</p>
+            <ul class="lista-back-end">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Flask</li>
+                <li>FastAPI</li>
+                <li>Django</li>
+            </ul>
+            <button onclick="mostrarDescripcionBackEnd()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-back-end"></p>
+            <button onclick="cambiarColorListaBackEnd()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenApis()"><img src="https://static.vecteezy.com/system/resources/previews/029/891/190/non_2x/cloud-api-application-programming-interface-internet-network-stock-illustration-vector.jpg" alt="Imagen de APIs" class="imagen-apis" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-apis"></p>
+            <p class="titulo-lista-apis">6. APIs</p>
+            <ul class="lista-apis">
+                <li>REST API</li>
+                <li>GraphQL</li>
+                <li>Fetch API</li>
+                <li>Axios</li>
+                <li>WebSockets</li>
+            </ul>
+            <button onclick="mostrarDescripcionApis()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-apis"></p>
+            <button onclick="cambiarColorListaApis()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenBasesDatos()"><img src="https://itdconsulting.com/wp-content/uploads/2022/03/Logos-de-base-de-datos-open-source-SQLite-MariaDB-mysql-cassandra-mongodb-elastic-redis-postgresql.png" alt="Imagen de bases de datos" class="imagen-bases-datos" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-bases-datos"></p>
+            <p class="titulo-lista-bases-datos">7. Bases de Datos</p>
+            <ul class="lista-bases-datos">
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>SQLite</li>
+                <br>
+                <button onclick="cambiarColorListaBasesDatos()">🧑‍💻</button>
+            </ul>
+            <button onclick="mostrarDescripcionBasesDatos()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-bases-datos"></p>
+            <p class="nota-lista-bases-datos-recomendadas">Se pueden recomendar:</p>
+            <ul class="lista-bases-datos-recomendadas">
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <br>
+                <button onclick="mostrarOtrasOpcionesBasesDatos()"><strong>Otras</strong></button> <button onclick="cambiarColorListaBasesDatosRecomendadas()">🧑‍💻</button>
+                <p class="otras-opciones-bases-datos"></p>
+            </ul>
+            <hr>
+            <button onclick="cambiarImagenDisenoBasesDatos()"><img src="https://th.bing.com/th/id/R.7fa375ecafa9eed3f4d669dabb794cca?rik=8n3A%2bZr52JlS6Q&pid=ImgRaw&r=0" alt="Imagen de diseño de bases de datos" class="imagen-diseno-bases-datos" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-diseno-bases-datos"></p>
+            <p class="titulo-lista-diseno-bases-datos">8. Diseño de Bases de Datos</p>
+            <ul class="lista-diseno-bases-datos">
+                <li>Normalización</li>
+                <li>Relaciones</li>
+                <li>Llaves primarias y foráneas</li>
+                <li>Índices</li>
+                <li>Consultas JOIN</li>
+                <li>Vistas</li>
+                <li>Procedimientos almacenados</li>
+            </ul>
+            <button onclick="mostrarDescripcionDisenoBasesDatos()"><strong>¿Cómo se desarrolla?</strong></button>
+            <p id="descripcion-diseno-bases-datos"></p>
+            <button onclick="cambiarColorListaDisenoBasesDatos()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenUmlModelado()"><img src="https://tse1.mm.bing.net/th/id/OIP.bQsg6GMJm9xJ0KGmueOuVwHaES?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de UML y modelado" class="imagen-uml-modelado" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-uml-modelado"></p>
+            <p class="titulo-lista-uml-modelado">9. UML y Modelado</p>
+            <ul class="lista-uml-modelado">
+                <li>Casos de uso</li>
+                <li>Diagramas de clases</li>
+                <li>Diagramas de secuencia</li>
+                <li>Diagramas de actividad</li>
+                <li>Diagramas de componentes</li>
+                <li>Diagramas ER</li>
+                <li>ERD</li>
+            </ul>
+            <button onclick="mostrarDescripcionUmlModelado()"><strong>¿En qué consiste?</strong></button>
+            <p id="descripcion-uml-modelado"></p>
+            <button onclick="cambiarColorListaUmlModelado()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenGit()"><img src="https://yganalyst.github.io/assets/images/git/git_github_logo.jpg" alt="Imagen de Git y GitHub" class="imagen-git" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-git"></p>
+            <p class="titulo-lista-git">10. Git (Control de Versiones)</p>
+            <ul class="lista-git">
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>GitFlow</li>
+                <li>Pull Request</li>
+                <li>Merge</li>
+                <li>Rebase</li>
+                <li>Cherry Pick</li>
+                <li>Tags</li>
+            </ul>
+            <button onclick="mostrarDescripcionGit()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-git"></p>
+            <button onclick="cambiarColorListaGit()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenLinux()"><img src="https://toppng.com/uploads/preview/linux-logo-png-image-11660298434qt5f32bbxj.png" alt="Imagen de Linux" class="imagen-linux" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-linux"></p>
+            <p class="titulo-lista-linux">11. Linux</p>
+            <ul class="lista-linux">
+                <li>Ubuntu</li>
+                <li>Debian</li>
+                <li>Fedora (básico)</li>
+            </ul>
+            <button onclick="mostrarDescripcionLinux()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-linux"></p>
+            <br>
+            <button onclick="cambiarColorListaLinux()">📱</button>
+            <button onclick="mostrarDescripcionDevOps()"><strong>¿Qué son los DevOps?</strong></button>
+            <p id="descripcion-devops"></p>
+            <hr>
+            <button onclick="cambiarImagenTerminal()"><img src="https://icons.veryicon.com/png/o/file-type/exquisite-multicolor-icon/windows-terminal.png" alt="Imagen de la terminal" class="imagen-terminal" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-terminal"></p>
+            <p class="titulo-lista-terminal">12. Terminal</p>
+            <ul class="lista-terminal">
+                <li>Bash</li>
+                <li>ZSH</li>
+                <li>Navegación</li>
+                <li>Permisos</li>
+                <li>Procesos</li>
+                <li>Variables de entorno</li>
+                <li>Alias</li>
+                <li>Scripts Bash</li>
+            </ul>
+            <button onclick="mostrarDescripcionTerminal()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-terminal"></p>
+            <button onclick="cambiarColorListaTerminal()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenSistemasOperativos()"><img src="https://tse2.mm.bing.net/th/id/OIP.-Nhca1gLj3tAhCHj5AL_XQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de sistemas operativos" class="imagen-sistemas-operativos" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-sistemas-operativos"></p>
+            <p class="titulo-lista-sistemas-operativos">13. Sistemas Operativos</p>
+            <ul class="lista-sistemas-operativos">
+                <li>Windows</li>
+                <li>Linux</li>
+                <li>Conceptos básicos de macOS</li>
+            </ul>
+            <button onclick="mostrarDescripcionSistemasOperativos()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-sistemas-operativos"></p>
+            <button onclick="cambiarColorListaSistemasOperativos()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenContenedores()"><img src="https://tse4.mm.bing.net/th/id/OIP.VFTWyYBLslC7NaDA1RM6sQHaEK?r=0&w=1280&h=720&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de contenedores" class="imagen-contenedores" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-contenedores"></p>
+            <p class="titulo-lista-contenedores">14. Contenedores</p>
+            <ul class="lista-contenedores">
+                <li>Docker</li>
+                <li>Docker Compose</li>
+            </ul>
+            <button onclick="mostrarDescripcionContenedores()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-contenedores"></p>
+            <button onclick="cambiarColorListaContenedores()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenCloud()"><img src="https://tse4.mm.bing.net/th/id/OIP.0lzY287VZLhi3U8u_4BjsAAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de Cloud" class="imagen-cloud" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-cloud"></p>
+            <p class="titulo-lista-cloud">15. Cloud</p>
+            <ul class="lista-cloud">
+                <li>AWS (básico)</li>
+                <li>Azure (básico)</li>
+                <li>Google Cloud (básico)</li>
+            </ul>
+            <button onclick="mostrarDescripcionCloud()"><strong>Descripción</strong></button>
+            <p id="descripcion-cloud"></p>
+            <button onclick="cambiarColorListaCloud()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenTesting()"><img src="https://dz2cdn1.dzone.com/storage/article-thumb/13131378-thumb.jpg" alt="Imagen de testing" class="imagen-testing" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-testing"></p>
+            <p class="titulo-lista-testing">16. Testing</p>
+            <ul class="lista-testing">
+                <li>Unit Testing</li>
+                <li>Integration Testing</li>
+                <li>Pytest</li>
+                <li>Jest</li>
+                <li>Cypress</li>
+            </ul>
+            <button onclick="mostrarDescripcionTesting()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-testing"></p>
+            <button onclick="cambiarColorListaTesting()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenPython()"><img src="https://tse4.mm.bing.net/th/id/OIP.cMtyabSNodTyGv7EDwfglQHaEL?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de Python" class="imagen-python" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-python"></p>
+            <p class="titulo-lista-python">17. Python</p>
+            <ul class="lista-python">
+                <li>POO (Programación Orientada a Objetos)</li>
+                <li>Decoradores</li>
+                <li>Generadores</li>
+                <li>Context Managers</li>
+                <li>Dataclasses</li>
+                <li>Typing</li>
+            </ul>
+            <button onclick="mostrarDescripcionPython()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-python"></p>
+            <button onclick="cambiarColorListaPython()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenJavaScript()"><img src="https://tse1.mm.bing.net/th/id/OIP.1fuHy5m0ivTEfkM8hYERVgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de JavaScript" class="imagen-javascript" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-javascript"></p>
+            <p class="titulo-lista-javascript">18. JavaScript</p>
+            <ul class="lista-javascript">
+                <li>ES6+</li>
+                <li>Async/Await</li>
+                <li>Promises</li>
+                <li>Closures</li>
+                <li>Módulos</li>
+                <li>Eventos</li>
+                <li>DOM</li>
+            </ul>
+            <button onclick="mostrarDescripcionJavaScript()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-javascript"></p>
+            <button onclick="cambiarColorListaJavaScript()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenTypeScript()"><img src="https://cdn.brandfetch.io/typescriptlang.org/fallback/lettermark/theme/dark/h/256/w/256/icon?c=1bfwsmEH20zzEfSNTed" alt="Imagen de TypeScript" class="imagen-typescript" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-typescript"></p>
+            <p class="titulo-lista-typescript">19. TypeScript</p>
+            <ul class="lista-typescript">
+                <li>Tipos</li>
+                <li>Interfaces</li>
+                <li>Generics</li>
+                <li>Decorators</li>
+                <li>Enums</li>
+            </ul>
+            <button onclick="mostrarDescripcionTypeScript()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-typescript"></p>
+            <button onclick="cambiarColorListaTypeScript()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenXml()"><img src="https://tse1.mm.bing.net/th/id/OIP.1YKLcBopjf-Btrpxwht1yQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de XML" class="imagen-xml" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-xml"></p>
+            <p class="titulo-lista-xml">20. XML</p>
+            <ul class="lista-xml">
+                <li>Sintaxis</li>
+                <li>Validacion</li>
+                <li>XPath</li>
+                <li>Uso en Odoo</li>
+                <br>
+                <button onclick="mostrarMensajeImportanteOrdenTemas()"><strong>IMPORTANTE</strong></button>
+                <p id="mensaje-importante-orden-temas"></p>
+            </ul>
+            <button onclick="mostrarDescripcionXml()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-xml"></p>
+            <button onclick="cambiarColorListaXml()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenJson()"><img src="https://www.fast-report.com/uploads/blogpost/json/logo_JSON.PNG" alt="Imagen de JSON" class="imagen-json" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-json"></p>
+            <p class="titulo-lista-json">21. JSON</p>
+            <ul class="lista-json">
+                <li>Objetos</li>
+                <li>Arrays</li>
+                <li>Serialización</li>
+            </ul>
+            <button onclick="mostrarDescripcionJson()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-json"></p>
+            <button onclick="cambiarColorListaJson()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenYaml()"><img src="https://cdn.vectorstock.com/i/1000v/72/98/yaml-file-document-icon-vector-24697298.jpg" alt="Imagen de YAML" class="imagen-yaml" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-yaml"></p>
+            <p class="titulo-lista-yaml">22. YAML</p>
+            <ul class="lista-yaml">
+                <li>Configuración</li>
+                <li>Docker</li>
+                <li>GitHub Actions</li>
+            </ul>
+            <button onclick="mostrarDescripcionYaml()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-yaml"></p>
+            <button onclick="cambiarColorListaYaml()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenErp()"><img src="https://img.freepik.com/premium-vector/erp-vector-icon-web_116137-3113.jpg" alt="Imagen de ERP" class="imagen-erp" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-erp"></p>
+            <p class="titulo-lista-erp">23. ERP</p>
+            <ul class="lista-erp">
+                <li>Conceptos ERP</li>
+                <li>Odoo</li>
+                <li>Módulos Odoo</li>
+                <li>ORM de Odoo</li>
+            </ul>
+            <button onclick="mostrarDescripcionErp()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-erp"></p>
+            <button onclick="cambiarColorListaErp()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenDesarrolloWeb()"><img src="https://tse2.mm.bing.net/th/id/OIP.qsiAC-4TAGhZHXW0oxpIIgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de desarrollo web" class="imagen-desarrollo-web" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-desarrollo-web"></p>
+            <p class="titulo-lista-desarrollo-web">24. Desarrollo Web</p>
+            <ul class="lista-desarrollo-web">
+                <li>Arquitectura Cliente-Servidor</li>
+                <li>HTTP/HTTPS</li>
+                <li>Cookies</li>
+                <li>Sessions</li>
+                <li>JWT</li>
+                <li>OAuth</li>
+                <br>
+                <button onclick="mostrarDatoImportanteDesarrolloWeb()"><strong>DATO IMPORTANTE</strong></button>
+                <p id="dato-importante-desarrollo-web"></p>
+            </ul>
+            <button onclick="mostrarDescripcionDesarrolloWeb()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-desarrollo-web"></p>
+            <button onclick="cambiarColorListaDesarrolloWeb()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenSeguridad()"><img src="https://tse2.mm.bing.net/th/id/OIP.IWCnR1XjdIhTSxpun4IoOwHaHa?r=0&pid=ImgDet&w=191&h=191&c=7&o=7&rm=3" alt="Imagen de seguridad" class="imagen-seguridad" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-seguridad"></p>
+            <p class="titulo-lista-seguridad">25. Seguridad</p>
+            <ul class="lista-seguridad">
+                <li>OWASP Top 10</li>
+                <li>XSS</li>
+                <li>CSRF</li>
+                <li>SQL Injection</li>
+                <li>Hashing</li>
+                <li>Autenticación y Autorización</li>
+                <br>
+                <button onclick="mostrarDatoImportanteSeguridad()"><strong>👉</strong></button>
+                <p id="dato-importante-seguridad"></p>
+            </ul>
+            <button onclick="mostrarDescripcionSeguridad()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-seguridad"></p>
+            <button onclick="cambiarColorListaSeguridad()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenAlgoritmos()"><img src="https://static.vecteezy.com/system/resources/previews/012/991/085/original/algorithm-icon-illustration-for-graphic-and-web-design-free-vector.jpg" alt="Imagen de algoritmos" class="imagen-algoritmos" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-algoritmos"></p>
+            <p class="titulo-lista-algoritmos">26. Algoritmos</p>
+            <ul class="lista-algoritmos">
+                <li>Búsqueda lineal</li>
+                <li>Búsqueda binaria</li>
+                <li>Ordenamiento</li>
+                <li>Recursividad</li>
+                <li>Divide y vencerás</li>
+                <li>Programación dinámica</li>
+            </ul>
+            <button onclick="mostrarMensajeImportanciaAlgoritmos()">👨‍💻 + ⚙️</button>
+            <p id="mensaje-importancia-algoritmos"></p>
+            <br>
+            <button onclick="mostrarDescripcionAlgoritmos()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-algoritmos"></p>
+            <button onclick="cambiarColorListaAlgoritmos()">📱</button>
+            <br>
+            <p>Para estudiar más a fondo los algoritmos, ve al siguiente enlace 👉</p><a href="https://the-algorithms.com/" target="_blank">Algoritmos</a>
+            <hr>
+            <button onclick="cambiarImagenEstructurasDatos()"><img src="https://tse4.mm.bing.net/th/id/OIP.OBhiSKPAuKn3Lg7_a70XigHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de estructuras de datos" class="imagen-estructuras-datos" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-estructuras-datos"></p>
+            <p class="titulo-lista-estructuras-datos">27. Estructuras de Datos</p>
+            <ul class="lista-estructuras-datos">
+                <li>Arrays</li>
+                <li>Listas enlazadas</li>
+                <li>Pilas</li>
+                <li>Colas</li>
+                <li>Tablas Hash</li>
+                <li>Árboles</li>
+                <li>Árbol binario</li>
+                <li>Árbol AVL</li>
+                <li>Heap</li>
+                <li>Grafos</li>
+            </ul>
+            <button onclick="mostrarDescripcionEstructurasDatos()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-estructuras-datos"></p>
+            <button onclick="cambiarColorListaEstructurasDatos()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenArquitecturaSoftware()"><img src="https://tse3.mm.bing.net/th/id/OIP.fbQcQR_tooiQZI3R5N3HkgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de arquitectura de software" class="imagen-arquitectura-software" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-arquitectura-software"></p>
+            <p class="titulo-lista-arquitectura-software">28. Arquitectura de Software</p>
+            <ul class="lista-arquitectura-software">
+                <li>MVC</li>
+                <li>MVVM</li>
+                <li>Cliente-Servidor</li>
+                <li>Microservicios</li>
+                <li>Monolitos</li>
+                <li>Clean Architecture</li>
+            </ul>
+            <button onclick="mostrarDescripcionArquitecturaSoftware()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-arquitectura-software"></p>
+            <button onclick="cambiarColorListaArquitecturaSoftware()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenPatronesDiseno()"><img src="https://www.solicitudes.net/wp-content/uploads/2024/05/498cebe9-4694-4169-8e82-b83c3a1c45dc.png" alt="Imagen de patrones de diseño" class="imagen-patrones-diseno" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-patrones-diseno"></p>
+            <p class="titulo-lista-patrones-diseno">29. Patrones de Diseño</p>
+            <ul class="lista-patrones-diseno">
+                <li>Singleton</li>
+                <li>Factory</li>
+                <li>Builder</li>
+                <li>Observer</li>
+                <li>Strategy</li>
+                <li>Adapter</li>
+                <li>Decorator</li>
+                <li>Command</li>
+            </ul>
+            <button onclick="mostrarDescripcionPatronesDiseno()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-patrones-diseno"></p>
+            <button onclick="cambiarColorListaPatronesDiseno()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenBuenasPracticas()"><img src="https://miro.medium.com/v2/resize:fit:1200/1*tpAjq5tBBfXZ4Y_mItB0YA.png" alt="Imagen de buenas prácticas" class="imagen-buenas-practicas" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-buenas-practicas"></p>
+            <p class="titulo-lista-buenas-practicas">30. Buenas prácticas</p>
+            <ul class="lista-buenas-practicas">
+                <li>SOLID</li>
+                <li>DRY</li>
+                <li>KISS</li>
+                <li>YAGNI</li>
+                <li>Clean Code</li>
+                <li>Refactoring</li>
+            </ul>
+            <button onclick="mostrarDescripcionBuenasPracticas()"><strong>¿Cómo lograrlas?</strong></button>
+            <p id="descripcion-buenas-practicas"></p>
+            <button onclick="cambiarColorListaBuenasPracticas()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenHerramientas()"><img src="https://tse1.mm.bing.net/th/id/OIP.AA8RlLQgNknujnwFoh7EPgHaFL?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de herramientas" class="imagen-herramientas" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-herramientas"></p>
+            <p class="titulo-lista-herramientas">31. Herramientas</p>
+            <ul class="lista-herramientas">
+                <li>Postman</li>
+                <li>Insomnia</li>
+                <li>Visual Studio Code (VS CODE)</li>
+                <li>IntelliJ IDEA</li>
+                <li>PyCharm</li>
+            </ul>
+            <button onclick="mostrarDescripcionHerramientas()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-herramientas"></p>
+            <button onclick="cambiarColorListaHerramientas()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenAutomatizacion()"><img src="https://miro.medium.com/v2/resize:fit:1358/format:webp/1*Mjro6V5Ya2pEf2i2CVvXZQ.png" alt="Imagen de automatización" class="imagen-automatizacion" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-automatizacion"></p>
+            <p class="titulo-lista-automatizacion">32. Automatización</p>
+            <ul class="lista-automatizacion">
+                <li>GitHub Actions</li>
+                <li>CI/CD</li>
+            </ul>
+            <button onclick="mostrarDescripcionAutomatizacion()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-automatizacion"></p>
+            <button onclick="cambiarColorListaAutomatizacion()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenApisTerceros()"><img src="https://tse4.mm.bing.net/th/id/OIP.9NQSbnCTLZ5sTUbkbtZXWQHaDt?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de APIs de terceros" class="imagen-apis-terceros" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-apis-terceros"></p>
+            <p class="titulo-lista-apis-terceros">33. APIs de terceros</p>
+            <ul class="lista-apis-terceros">
+                <li>Google APIs</li>
+                <li>Stripe</li>
+                <li>OpenAI API</li>
+            </ul>
+            <button onclick="mostrarDescripcionApisTerceros()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-apis-terceros"></p>
+            <button onclick="cambiarColorListaApisTerceros()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenComunicacion()"><img src="https://salif.github.io/linkita/images/markdown-syntax.png" alt="Imagen de comunicación" class="imagen-comunicacion" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-comunicacion"></p>
+            <p class="titulo-lista-comunicacion">34. Comunicación</p>
+            <ul class="lista-comunicacion">
+                <li>Markdown</li>
+                <li>Documentación técnica</li>
+                <li>README profesionales</li>
+            </ul>
+            <button onclick="mostrarDescripcionComunicacion()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-comunicacion"></p>
+            <button onclick="cambiarColorListaComunicacion()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenRedes()"><img src="https://static.vecteezy.com/system/resources/previews/023/586/148/large_2x/world-modern-technology-the-hologram-represents-the-information-operating-system-of-the-smart-technology-available-in-the-world-on-the-internet-and-helps-the-business-grow-by-leaps-and-bounds-vector.jpg" alt="Imagen de redes" class="imagen-redes" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-redes"></p>
+            <p class="titulo-lista-redes">35. Redes</p>
+            <ul class="lista-redes">
+                <li>TPC/IP</li>
+                <li>DNS</li>
+                <li>HTTP/HTTPS</li>
+                <li>SSH</li>
+                <li>FTP</li>
+            </ul>
+            <button onclick="mostrarDescripcionRedes()"><strong>¿Qué son?</strong></button>
+            <p id="descripcion-redes"></p>
+            <button onclick="cambiarColorListaRedes()">📱</button>
+            <hr>
+            <button onclick="cambiarImagenDesarrolloProfesional()"><img src="https://tse3.mm.bing.net/th/id/OIP.0vyFfYKzfspLcxOcw5MjFAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen de desarrollo profesional" class="imagen-desarrollo-profesional" loading="lazy" decoding="async"></button>
+            <p class="fuente-imagen-desarrollo-profesional"></p>
+            <p class="titulo-lista-desarrollo-profesional">36. Desarrollo Profesional</p>
+            <ul class="lista-desarrollo-profesional">
+                <li>Portafolio</li>
+                <li>LinkedIn</li>
+                <li>Currículum Vitae (CV)</li>
+                <li>Entrevistas técnicas</li>
+                <li>LeetCode</li>
+                <li>HackerRank</li>
+                <li>Codewars</li>
+            </ul>
+            <button onclick="mostrarDescripcionDesarrolloProfesional()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-desarrollo-profesional"></p>
+            <button onclick="cambiarColorListaDesarrolloProfesional()">📱</button>
+            <p class="titulo-lista-open-source">37. Open Source</p>
+            <ul class="lista-open-source">
+                <li>GitHub Issues</li>
+                <li>Pull Requests</li>
+                <li>Forks</li>
+                <li>Code Review</li>
+            </ul>
+            <button onclick="mostrarDescripcionOpenSource()"><strong>¿Qué es?</strong></button>
+            <p id="descripcion-open-source"></p>
+            <button onclick="cambiarColorListaOpenSource()">📱</button>
+            <hr>
+            <button onclick="mostrarMensajeTecnologiasActualizadas()">
+            <img src="https://img.magnific.com/vector-gratis/computadora-portatil-icono-isometrico-codigo-programa-desarrollo-software-aplicaciones-programacion-neon-oscuro_39422-971.jpg?semt=ais_hybrid&w=740&q=80" alt="Aprende a programar" class="imagen-aprende-programar" loading="lazy" decoding="async"></button>
+            <p id="mensaje-tecnologias-actualizadas"></p>
+            <img src="https://mimo.app/i/hacker.png" alt="Avatar de hacker" id="foto-pensamiento">
+            <textarea id="texto-pensamiento" rows="3" cols="18"  placeholder="What's on your mind"></textarea>
+            <br>
+            <button onclick="mostrarPensamientoHacker()">👨🏻‍💻</button>
+            <p id="pensamiento-publicado"></p>
+            </article>
+        </section>
+        <footer>
+            <section>
+            <a href="#titulo-principal">Volver al comienzo</a>
+            <a href="mailto:evonulglezveloz@gmail.com">Contáctame aquí</a>
+            </section>
+            <p>Copyright 2026 Blog de Evan</p>
+            <br>
+            <button onclick="revelarMensajeOculto()"><img src="img/Talento.jpg" alt="Mensaje sobre el talento y el esfuerzo de un programador" id="imagen-mensaje-oculto" loading="lazy" decoding="async"></button>
+        </footer>
+    </div>
+    <section id="pantalla-inicio">
+        <img src="img/Logo EUGV.png" alt="EUGV" class="logo-inicio">
+        <h1>PLAN DE ESTUDIOS</h1>
+        <a href="#contenido-principal" class="boton-inicio">Haz click para iniciar como invitado!</a>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
