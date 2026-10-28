@@ -1,0 +1,1089 @@
+html {
+    overflow-x: hidden;
+    color: #222;
+}
+
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+    color: #222;
+}
+
+hr {
+    color: #222;
+    clear: both;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/*Imagenes*/
+
+.Perfil {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    padding: 0 0 0 0;
+    border-radius: 200px;
+}
+
+.Python-inicio {
+    width: 300px;
+    float: right;
+    margin: 0 0 10px 0;
+    padding: 0 40px 50px 0;
+}
+
+/* ===== Imagenes de cada tema ===== */
+.Lenguajes {
+    width: 500px;
+    float: right;
+    margin: auto;
+    padding: 0 300px 0 0;
+}
+
+.Front-end {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.ProcesadoresCSS {
+    width: 200px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.Frameworks {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.Back-end {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.APIs {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.BasesDeDatos {
+    width: 400px;
+    float: right;
+    margin: auto;
+    padding: 0 400px 0 0;
+}
+
+.DiseñoBD {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.UML {
+    width: 400px;
+    float: right;
+    margin: auto;
+    padding: 0 400px 0 0;
+}
+
+.Git {
+    width: 400px;
+    float: right;
+    margin: auto;
+    padding: 0 400px 0 0;
+}
+
+.Linux {
+    width: 250px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.Terminal {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.SistemasOperativos {
+    width: 400px;
+    float: right;
+    margin: auto;
+    padding: 0 400px 0 0;
+}
+
+.Contenedores {
+    width: 250px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.Cloud {
+    width: 400px;
+    float: right;
+    margin: auto;
+    padding: 0 400px 0 0;
+}
+
+.Testing {
+    width: 400px;
+    float: right;
+    margin: auto;
+    padding: 0 400px 0 0;
+}
+
+.Python {
+    width: 440px;
+    float: right;
+    margin: auto;
+    padding: 0 400px 0 0;
+}
+
+.JavaScript {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 520px 10px 0;
+}
+
+.TypeScript {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 520px 10px 0;
+}
+
+.XML {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 520px 0 0;
+}
+
+.JSON {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 520px 0 0;
+}
+
+.YAML {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 520px 10px 0;
+}
+
+.ERP {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 520px 10px 0;
+}
+
+.DesarrolloWeb {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 520px 10px 0;
+}
+
+.Seguridad {
+    width: 190px;
+    float: right;
+    margin: auto;
+    padding: 0 520px 10px 0;
+}
+
+.Algoritmos {
+    width: 400px;
+    float: right;
+    margin: auto;
+    padding: 0 420px 0 0;
+}
+
+.EstructurasDatos {
+    width: 245px;
+    float: right;
+    margin: auto;
+    padding: 0 490px 0 0;
+}
+
+.ArquitecturaSoftware {
+    width: 300px;
+    float: right;
+    margin: auto;
+    padding: 0 490px 0 0;
+}
+
+.PatronesDiseño {
+    width: 310px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 10px 0;
+}
+
+.BuenasPracticas {
+    width: 300px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.Herramientas {
+    width: 430px;
+    float: right;
+    margin: auto;
+    padding: 0 380px 0 0;
+}
+
+.Automatizacion {
+    width: 220px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 10px 0;
+}
+
+.APIsTerceros {
+    width: 440px;
+    float: right;
+    margin: auto;
+    padding: 0 390px 0 0;
+}
+
+.Comunicacion {
+    width: 220px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 0 0;
+}
+
+.Redes {
+    width: 260px;
+    float: right;
+    margin: auto;
+    padding: 0 480px 10px 0;
+}
+
+.DesarrolloProfesional {
+    width: 600px;
+    float: right;
+    margin: auto;
+    padding: 0 300px 10px 0;
+}
+
+/* ===== Titulos de cada Lista===== */
+.P1 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P4 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P5 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P6 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P7 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P8 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P9 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P11 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P12 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P13 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P14 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P15 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P16 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P17 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P18 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P19 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P20 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P21 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P22 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P23 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P24 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P25 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P26 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P27 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P28 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P29 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P30 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P31 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P32 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P33 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P34 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P35 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P36 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P37 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P38 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P39 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P40 {
+    text-align: justify;
+    color: lightseagreen;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+/* ===== Notas dentro de un tema (Se recomiendan, Opcionales, etc.) ===== */
+.P2 {
+    text-align: justify;
+    color: #364552;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P3 {
+    text-align: justify;
+    color: #364552;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.P10 {
+    text-align: justify;
+    color: #364552;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+/* ===== Listas de cada tema (Lista1..Lista40, igual patron que tu List1..List40) ===== */
+.Lista1 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista2 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista3 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista4 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista5 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista6 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista7 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista8 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista9 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista10 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista11 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista12 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista13 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista14 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista15 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista16 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista17 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista18 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista19 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista20 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista21 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista22 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista23 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista24 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista25 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista26 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista27 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista28 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista29 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista30 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista31 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista32 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista33 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista34 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista35 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista36 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista37 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista38 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista39 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.Lista40 {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+/*Cuerpo de la página*/
+
+header {
+    background-color: #364552;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+section article {
+    transition: box-shadow 1s ease;
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+
+section article p {
+    margin: 1rem;
+}
+
+section article:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 1);
+}
+
+.Saludo {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+#EUGV {
+    color: darkgreen;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.Descripcion {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.IDS {
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+/*Listas*/
+
+#TemasTecnologiasLenguajes {
+    color: green;
+}
+
+/*Final de la página*/
+
+.DescripcionFinal {
+    font-size: 18px;
+    color: #364552;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #222;
+    padding: 3rem;
+    color: #fff;
+}
+
+footer section {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    transition: color 1s ease;
+    color: #fff;
+}
+
+footer a:hover{
+    color:cornflowerblue
+}
+
+/* =========================================================
+   PANTALLA DE INICIO (logo de EUGV + "Haz click para iniciar")
+   ========================================================= */
+
+#contenido {
+    display: none;
+}
+
+#contenido:target {
+    display: block;
+}
+
+#contenido:target ~ #inicio {
+    display: none;
+}
+
+#inicio {
+    background-color: #364552;
+    color: white;
+    padding: 8rem 2rem;
+}
+
+.LogoInicio {
+    width: 190px;
+    margin: auto;
+    transition: width 0.6s ease, border-radius 0.6s ease;
+}
+
+.LogoInicio:hover {
+    width: 210px;
+    border-radius: 50%;
+}
+
+#inicio h1 {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+}
+
+/* Boton */
+.BotonInicio {
+    background-color: lightseagreen;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, padding 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
+}
+
+.BotonInicio:hover {
+    background-color: darkgreen;
+    padding: 1.3rem 2.6rem;
+    border-radius: 30px;
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.6);
+}
+
+/* =========================================================
+   RESPONSIVE
+   -----------------------------------------------------------
+   Todas las imágenes de "Temas, Tecnologías..." usan
+   float: right + padding-right muy grandes (300px-520px),
+   pensados para pantallas anchas de escritorio. Debajo de
+   1300px ese espacio ya no cabe y provoca desbordes
+   horizontales. Estas media queries anulan ese
+   comportamiento en pantallas medianas y pequeñas para que
+   las imágenes se centren y el texto fluya debajo, sin
+   tocar ninguna clase ni ID existente arriba.
+   ========================================================= */
+
+@media (max-width: 1300px) {
+
+    img[class] {
+        float: none;
+        width: auto;
+        max-width: 90%;
+        height: auto;
+        padding: 0;
+        margin: 0 auto 1.2rem auto;
+        display: block;
+    }
+
+    .Perfil {
+        max-width: 280px;
+    }
+
+    header {
+        padding: 2.5rem 1.5rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    #inicio {
+        padding: 6rem 1.5rem;
+    }
+
+    #inicio h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .Saludo,
+    .Descripcion,
+    .IDS,
+    .DescripcionFinal {
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+    }
+
+    section article {
+        margin: 0.8rem 0.5rem;
+    }
+
+    .Perfil {
+        max-width: 200px;
+    }
+
+    img[class] {
+        max-width: 95%;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    footer section {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #inicio {
+        padding: 4rem 1rem;
+    }
+
+    #inicio h1 {
+        font-size: 1.7rem;
+    }
+
+    .BotonInicio {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+    }
+
+    .BotonInicio:hover {
+        padding: 1rem 1.9rem;
+    }
+}
+
+@media (max-width: 380px) {
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .LogoInicio {
+        width: 140px;
+    }
+}
+
+/*Botones: Descripciones de temas, mensajes informativos en GENERAL*/
+
+button {
+    margin: 30px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: 1s ease;
+    font-weight: bold;
+    border: 0px solid;
+    position: relative;
+    outline: none;
+    background-color: #D9E8FB;
+    color: #4D4D87;
+}
