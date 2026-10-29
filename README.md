@@ -6,12 +6,10 @@
 
 ## About Me :
 
-- 🏢 
-- 🏢 
-- 🎓 
-- 🎓 
-- 🏡
-- ⚡ 
+- 🎓 First-semester student in Software Development Engineering 
+- 🎓 A big fan of programming 
+- 🏡 Online student and self-taught 
+- ⚡ I learn quickly 
 
 <br>
 
@@ -23,10 +21,9 @@
 
 <br>
 
-<img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/> <img src="https://img.icons8.com/color/48/000000/css3.png"/>   <img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/> <img src="https://img.icons8.com/office/48/000000/react.png"/><img src="https://img.icons8.com/officel/48/000000/php-logo.png"/> <img src="https://img.icons8.com/color/48/000000/mysql-logo.png"/>
-
+<img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/> <img src="https://img.icons8.com/color/48/000000/css3.png"/>   <img src="https://img.icons8.com/color/48/000000/javascript--v1.png"/>
 <br>
 
 
 
-Last edited on: 
+Last edited on: 28/10/2026
