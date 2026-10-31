@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap");
+
+/* 
+   Estilo "unidad de control": azul petróleo oscuro,
+   líneas finas cian, octágonos y acentos lima / ámbar
+*/
+:root {
+    --bg: #04101a;
+    --panel: #08202b;
+    --panel-2: #0b2a37;
+    --line: #1b5566;
+    --line-soft: #103341;
+    --cyan: #27d8f0;
+    --lime: #8dff3d;
+    --amber: #f5a31c;
+    --text: #cfe6ec;
+    --text-dim: #7fa5b1;
+    --fuente: "Rajdhani", "Segoe UI", Tahoma, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0 clamp(12px, 3vw, 40px);
+    font-family: var(--fuente);
+    font-size: clamp(1.02rem, 0.96rem + 0.32vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--text);
+    background:
+        radial-gradient(ellipse at 50% -10%, #0e3646 0%, transparent 60%),
+        linear-gradient(180deg, #06161f 0%, var(--bg) 100%);
+    background-attachment: fixed;
+}
+
+/* Cuadrícula tenue de fondo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(39, 216, 240, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(39, 216, 240, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+}
+
+::selection {
+    background: var(--cyan);
+    color: var(--bg);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--line);
+}
+
+/* ---------- Separadores ---------- */
+hr {
+    max-width: 960px;
+    height: 1px;
+    margin: 28px auto;
+    border: 0;
+    background: linear-gradient(90deg, transparent, var(--line), transparent);
+}
+
+/* ---------- Paneles con borde fino y esquinas cortadas ---------- */
+header,
+section > article {
+    --corte: 22px;
+    position: relative;
+    isolation: isolate;
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--line);
+    clip-path: polygon(
+        var(--corte) 0, calc(100% - var(--corte)) 0,
+        100% var(--corte), 100% calc(100% - var(--corte)),
+        calc(100% - var(--corte)) 100%, var(--corte) 100%,
+        0 calc(100% - var(--corte)), 0 var(--corte)
+    );
+}
+
+header::before,
+section > article::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    background: linear-gradient(160deg, var(--panel-2), var(--panel) 65%);
+    clip-path: polygon(
+        calc(var(--corte) - 0.4px) 0, calc(100% - var(--corte) + 0.4px) 0,
+        100% calc(var(--corte) - 0.4px), 100% calc(100% - var(--corte) + 0.4px),
+        calc(100% - var(--corte) + 0.4px) 100%, calc(var(--corte) - 0.4px) 100%,
+        0 calc(100% - var(--corte) + 0.4px), 0 calc(var(--corte) - 0.4px)
+    );
+}
+
+/* ---------- Cabecera ---------- */
+header {
+    --corte: 28px;
+    margin-top: 32px;
+    padding: 36px 28px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(1.6rem, 4.4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #eaffff;
+    text-shadow: 0 0 18px rgba(39, 216, 240, 0.4);
+}
+
+header p {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+}
+
+header figure {
+    margin-top: 24px;
+}
+
+/* Imágenes enmarcadas en octágono */
+header img,
+section article img {
+    display: block;
+    width: min(320px, 85%);
+    height: auto;
+    margin: 20px auto 0;
+    padding: 2px;
+    background: var(--line);
+    clip-path: polygon(
+        18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px),
+        calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px
+    );
+}
+
+/* ---------- Contenido ---------- */
+section > article {
+    padding: 32px 34px 34px;
+}
+
+section > article h2 {
+    margin-bottom: 14px;
+    padding-left: 16px;
+    border-left: 3px solid var(--amber);
+    font-size: clamp(1.25rem, 3vw, 1.8rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cyan);
+}
+
+section > article p {
+    margin-bottom: 12px;
+    color: #bcd8df;
+}
+
+strong {
+    color: var(--lime);
+    font-weight: 700;
+}
+
+/* Lista con marcadores octagonales lima */
+ul {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+    list-style: none;
+}
+
+li {
+    position: relative;
+    padding: 10px 14px 10px 40px;
+    color: #cfe6ec;
+    background: rgba(39, 216, 240, 0.05);
+    border-left: 2px solid var(--line);
+    transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 1.05em;
+    width: 11px;
+    height: 11px;
+    background: var(--lime);
+    clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+}
+
+
+/* ---------- Botón principal (estilo "A  SELECCIONAR") ---------- */
+section > article:has(> a[href="concept.html"]) {
+    background: none;
+    clip-path: none;
+    padding: 8px 0;
+    text-align: center;
+}
+
+section > article:has(> a[href="concept.html"])::before {
+    display: none;
+}
+
+a[href="concept.html"],
+footer a {
+    --corte: 14px;
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 36px 14px 18px;
+    font-family: var(--fuente);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #eaffff;
+    background: var(--cyan);
+    clip-path: polygon(
+        var(--corte) 0, calc(100% - var(--corte)) 0,
+        100% var(--corte), 100% calc(100% - var(--corte)),
+        calc(100% - var(--corte)) 100%, var(--corte) 100%,
+        0 calc(100% - var(--corte)), 0 var(--corte)
+    );
+    transition: background 0.2s, transform 0.2s;
+}
+
+a[href="concept.html"]::before,
+footer a::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    background: radial-gradient(circle at 20% 50%, rgba(39, 216, 240, 0.35), #07303c 75%);
+    clip-path: polygon(
+        calc(var(--corte) - 0.4px) 0, calc(100% - var(--corte) + 0.4px) 0,
+        100% calc(var(--corte) - 0.4px), 100% calc(100% - var(--corte) + 0.4px),
+        calc(100% - var(--corte) + 0.4px) 100%, calc(var(--corte) - 0.4px) 100%,
+        0 calc(100% - var(--corte) + 0.4px), 0 calc(var(--corte) - 0.4px)
+    );
+    transition: background 0.2s;
+}
+
+/* Círculo con la letra "A", como el botón de la referencia */
+a[href="concept.html"]::after {
+    content: "A";
+    order: -1;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 1.05rem;
+    border: 2px solid #eaffff;
+    border-radius: 50%;
+}
+
+
+
+a[href="concept.html"]:focus-visible,
+footer a:focus-visible {
+    background: var(--amber);
+    outline: none;
+}
+
+a[href="concept.html"]:active,
+footer a:active {
+    transform: scale(0.96);
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+    max-width: 960px;
+    margin: 48px auto 0;
+    padding: 24px 0 36px;
+    text-align: center;
+    border-top: 1px solid var(--line-soft);
+}
+
+footer section {
+    margin-bottom: 16px;
+}
+
+footer a {
+    --corte: 10px;
+    gap: 10px;
+    padding: 9px 22px;
+    font-size: 1rem;
+    color: var(--cyan);
+}
+
+footer a::before {
+    background: #06222d;
+}
+
+footer a::after {
+    content: "▲";
+    order: -1;
+    font-size: 0.75em;
+}
+
+
+footer p {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+}
+
+/* ---------- Animaciones ---------- */
+header,
+section > article {
+    animation: aparecer 0.6s ease-out both;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: none; }
+}
+
+/* 
+   ADAPTACIÓN A CUALQUIER DISPOSITIVO
+*/
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, p, li {
+    overflow-wrap: break-word;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* El efecto "hover" solo en dispositivos con ratón
+   (en pantallas táctiles se quedaba pegado al tocar) */
+@media (hover: hover) {
+    li:hover {
+        background: rgba(141, 255, 61, 0.08);
+        border-left-color: var(--lime);
+        transform: translateX(4px);
+    }
+
+    a[href="concept.html"]:hover,
+    footer a:hover {
+        background: var(--lime);
+        transform: translateY(-2px);
+    }
+
+    a[href="concept.html"]:hover::before,
+    footer a:hover::before {
+        background: #0b4252;
+    }
+
+    footer a:hover {
+        color: #04101a;
+    }
+}
+
+/* Pantallas táctiles: áreas de toque cómodas (mínimo 44 px) */
+@media (pointer: coarse) {
+    a[href="concept.html"],
+    footer a {
+        min-height: 44px;
+    }
+
+    li {
+        padding-block: 12px;
+    }
+}
+
+/* Monitores grandes y TV */
+@media (min-width: 1500px) {
+    header,
+    section > article,
+    footer,
+    hr {
+        max-width: 1120px;
+    }
+
+    header img,
+    section article img {
+        width: min(380px, 85%);
+    }
+}
+
+/* Tablets y laptops pequeñas */
+@media (max-width: 1024px) {
+    header {
+        --corte: 22px;
+    }
+
+    section > article {
+        padding: 28px 26px 30px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 640px) {
+    body {
+        padding: 0 12px;
+    }
+
+    header {
+        --corte: 16px;
+        margin-top: 16px;
+        padding: 26px 16px 22px;
+    }
+
+    header img,
+    section article img {
+        width: min(260px, 80%);
+    }
+
+    section > article {
+        --corte: 16px;
+        padding: 22px 16px 24px;
+    }
+
+    hr {
+        margin: 20px auto;
+    }
+
+    section > article h2 {
+        padding-left: 12px;
+    }
+
+    li {
+        padding: 10px 12px 10px 36px;
+    }
+
+    li::before {
+        left: 13px;
+    }
+
+    /* Botón principal a lo ancho, fácil de tocar con el pulgar */
+    a[href="concept.html"] {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 14px 18px;
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
+    }
+
+    footer {
+        margin-top: 32px;
+    }
+}
+
+/* Celulares muy pequeños */
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 1.4rem;
+        letter-spacing: 0.05em;
+    }
+
+    header p {
+        letter-spacing: 0.06em;
+        font-size: 1rem;
+    }
+
+    a[href="concept.html"] {
+        letter-spacing: 0.06em;
+        gap: 10px;
+    }
+}
+
+/* Celulares en horizontal (poca altura) */
+@media (max-height: 480px) and (orientation: landscape) {
+    header {
+        margin-top: 12px;
+        padding-block: 20px 18px;
+    }
+
+    header figure {
+        margin-top: 14px;
+    }
+
+    header img,
+    section article img {
+        width: min(200px, 50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}

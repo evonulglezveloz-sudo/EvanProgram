@@ -1,0 +1,661 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap");
+
+/* 
+   Estilo "unidad de control": azul petróleo oscuro,
+   líneas finas cian, octágonos y acentos lima / ámbar
+*/
+:root {
+    --bg: #04101a;
+    --panel: #08202b;
+    --panel-2: #0b2a37;
+    --line: #1b5566;
+    --line-soft: #103341;
+    --cyan: #27d8f0;
+    --lime: #8dff3d;
+    --amber: #f5a31c;
+    --text: #cfe6ec;
+    --text-dim: #7fa5b1;
+    --fuente: "Rajdhani", "Segoe UI", Tahoma, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0 clamp(12px, 3vw, 40px);
+    font-family: var(--fuente);
+    font-size: clamp(1rem, 0.94rem + 0.3vw, 1.2rem);
+    line-height: 1.55;
+    color: var(--text);
+    background:
+        radial-gradient(ellipse at 50% -10%, #0e3646 0%, transparent 60%),
+        linear-gradient(180deg, #06161f 0%, var(--bg) 100%);
+    background-attachment: fixed;
+}
+
+/* Cuadrícula tenue de fondo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(39, 216, 240, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(39, 216, 240, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+}
+
+::selection {
+    background: var(--cyan);
+    color: var(--bg);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--line);
+}
+
+/* ---------- Separadores ---------- */
+hr {
+    max-width: 1180px;
+    height: 1px;
+    margin: 26px auto;
+    border: 0;
+    background: linear-gradient(90deg, transparent, var(--line), transparent);
+}
+
+/* ---------- Cabecera ---------- */
+header,
+.grupo-letra > section > article {
+    position: relative;
+    isolation: isolate;
+    background: var(--line);
+    clip-path: polygon(
+        var(--corte) 0, calc(100% - var(--corte)) 0,
+        100% var(--corte), 100% calc(100% - var(--corte)),
+        calc(100% - var(--corte)) 100%, var(--corte) 100%,
+        0 calc(100% - var(--corte)), 0 var(--corte)
+    );
+}
+
+header::before,
+.grupo-letra > section > article::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    background: linear-gradient(160deg, var(--panel-2), var(--panel) 65%);
+    clip-path: polygon(
+        calc(var(--corte) - 0.4px) 0, calc(100% - var(--corte) + 0.4px) 0,
+        100% calc(var(--corte) - 0.4px), 100% calc(100% - var(--corte) + 0.4px),
+        calc(100% - var(--corte) + 0.4px) 100%, calc(var(--corte) - 0.4px) 100%,
+        0 calc(100% - var(--corte) + 0.4px), 0 calc(var(--corte) - 0.4px)
+    );
+}
+
+header {
+    --corte: 24px;
+    max-width: 1180px;
+    margin: 28px auto 0;
+    padding: 30px 24px 26px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #eaffff;
+    text-shadow: 0 0 18px rgba(39, 216, 240, 0.4);
+}
+
+header img {
+    display: block;
+    width: min(300px, 80%);
+    height: auto;
+    margin: 20px auto 0;
+    padding: 2px;
+    background: var(--line);
+    clip-path: polygon(
+        18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px),
+        calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px
+    );
+}
+
+/* ---------- Contenedor principal ---------- */
+body > section > article {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+body > section > article > div:first-child h2 {
+    padding-left: 16px;
+    border-left: 3px solid var(--amber);
+    font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cyan);
+}
+
+/* ---------- Botones de letras (abecedario) ---------- */
+.abecedario {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 8px;
+    margin: 0 0 30px;
+    background: rgba(4, 16, 26, 0.9);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.btn-letra {
+    --corte: 10px;
+    position: relative;
+    isolation: isolate;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    cursor: pointer;
+    font-family: var(--fuente);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    background: var(--line);
+    clip-path: polygon(
+        var(--corte) 0, calc(100% - var(--corte)) 0,
+        100% var(--corte), 100% calc(100% - var(--corte)),
+        calc(100% - var(--corte)) 100%, var(--corte) 100%,
+        0 calc(100% - var(--corte)), 0 var(--corte)
+    );
+    transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.btn-letra::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    background: #06222d;
+    clip-path: polygon(
+        calc(var(--corte) - 0.4px) 0, calc(100% - var(--corte) + 0.4px) 0,
+        100% calc(var(--corte) - 0.4px), 100% calc(100% - var(--corte) + 0.4px),
+        calc(100% - var(--corte) + 0.4px) 100%, calc(var(--corte) - 0.4px) 100%,
+        0 calc(100% - var(--corte) + 0.4px), 0 calc(var(--corte) - 0.4px)
+    );
+    transition: background 0.2s;
+}
+
+.btn-letra span {
+    display: block;
+    line-height: 1;
+}
+
+
+.btn-letra:focus-visible {
+    background: var(--amber);
+    outline: none;
+}
+
+.btn-letra:active {
+    transform: scale(0.94);
+}
+
+/* Letra seleccionada: octágono cian brillante */
+.btn-letra.activo {
+    color: #eaffff;
+    background: var(--cyan);
+}
+
+.btn-letra.activo::before {
+    background: radial-gradient(circle, rgba(39, 216, 240, 0.4), #07303c 75%);
+}
+
+.btn-letra.activo span {
+    animation: pulso 2.2s ease-in-out infinite;
+}
+
+/* ---------- Grupos de conceptos (uno por letra) ---------- */
+.grupo-letra {
+    display: none;
+}
+
+.grupo-letra.activo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+    gap: 22px;
+    animation: entrada-grupo 0.4s ease-out both;
+}
+
+.grupo-letra > section {
+    display: flex;
+    animation: aparecer 0.45s ease-out both;
+}
+
+.grupo-letra.activo > section:nth-child(n+2) { animation-delay: 0.05s; }
+.grupo-letra.activo > section:nth-child(n+3) { animation-delay: 0.10s; }
+.grupo-letra.activo > section:nth-child(n+4) { animation-delay: 0.15s; }
+.grupo-letra.activo > section:nth-child(n+5) { animation-delay: 0.20s; }
+.grupo-letra.activo > section:nth-child(n+6) { animation-delay: 0.25s; }
+.grupo-letra.activo > section:nth-child(n+7) { animation-delay: 0.30s; }
+.grupo-letra.activo > section:nth-child(n+8) { animation-delay: 0.35s; }
+
+/* ---------- Tarjeta de concepto ---------- */
+.grupo-letra > section > article {
+    --corte: 16px;
+    flex: 1;
+    padding: 24px 18px 26px;
+    transition: background 0.25s;
+}
+
+
+.grupo-letra article > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+/* Título del concepto: etiqueta ámbar en mayúsculas */
+.grupo-letra article > div > p:not([class]) {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+}
+
+/* Botón con la imagen (octágono) */
+.grupo-letra article button {
+    --corte: 18px;
+    display: block;
+    width: min(100%, 210px);
+    padding: 2px;
+    border: 0;
+    cursor: pointer;
+    background: var(--line);
+    clip-path: polygon(
+        var(--corte) 0, calc(100% - var(--corte)) 0,
+        100% var(--corte), 100% calc(100% - var(--corte)),
+        calc(100% - var(--corte)) 100%, var(--corte) 100%,
+        0 calc(100% - var(--corte)), 0 var(--corte)
+    );
+    transition: background 0.25s, transform 0.25s;
+}
+
+.grupo-letra article button img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background: #dbeef2;
+    filter: brightness(0.9) saturate(0.9);
+    clip-path: polygon(
+        calc(18px - 1px) 0, calc(100% - 18px + 1px) 0,
+        100% calc(18px - 1px), 100% calc(100% - 18px + 1px),
+        calc(100% - 18px + 1px) 100%, calc(18px - 1px) 100%,
+        0 calc(100% - 18px + 1px), 0 calc(18px - 1px)
+    );
+    transition: filter 0.25s;
+}
+
+
+
+.grupo-letra article button:focus-visible {
+    background: var(--amber);
+    outline: none;
+}
+
+.grupo-letra article button:active {
+    transform: scale(0.97);
+}
+
+/* Descripción: aparece al hacer clic, con acento lima */
+.grupo-letra article [class^="descripcion-"] {
+    width: 100%;
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 1.02rem;
+    line-height: 1.5;
+    color: #e4f6fa;
+    background: rgba(141, 255, 61, 0.07);
+    border-left: 3px solid var(--lime);
+    animation: aparecer 0.35s ease-out both;
+}
+
+.grupo-letra article [class^="descripcion-"]:empty {
+    display: none;
+}
+
+/* Cuando la tarjeta está resaltada (hover) el texto mantiene contraste */
+
+/* ---------- Pie de página ---------- */
+footer {
+    max-width: 1180px;
+    margin: 48px auto 0;
+    padding: 24px 0 36px;
+    text-align: center;
+    border-top: 1px solid var(--line-soft);
+}
+
+footer section {
+    margin-bottom: 16px;
+}
+
+footer a {
+    --corte: 10px;
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 22px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cyan);
+    background: var(--line);
+    clip-path: polygon(
+        var(--corte) 0, calc(100% - var(--corte)) 0,
+        100% var(--corte), 100% calc(100% - var(--corte)),
+        calc(100% - var(--corte)) 100%, var(--corte) 100%,
+        0 calc(100% - var(--corte)), 0 var(--corte)
+    );
+    transition: color 0.2s, background 0.2s;
+}
+
+footer a::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    z-index: -1;
+    background: #06222d;
+    clip-path: polygon(
+        calc(var(--corte) - 0.4px) 0, calc(100% - var(--corte) + 0.4px) 0,
+        100% calc(var(--corte) - 0.4px), 100% calc(100% - var(--corte) + 0.4px),
+        calc(100% - var(--corte) + 0.4px) 100%, calc(var(--corte) - 0.4px) 100%,
+        0 calc(100% - var(--corte) + 0.4px), 0 calc(var(--corte) - 0.4px)
+    );
+}
+
+footer a::after {
+    content: "▲";
+    order: -1;
+    font-size: 0.75em;
+}
+
+
+footer a:focus-visible {
+    background: var(--amber);
+    outline: none;
+}
+
+footer p {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+}
+
+/* ---------- Animaciones ---------- */
+@keyframes entrada-grupo {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(16px) scale(0.98); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes pulso {
+    0%, 100% { text-shadow: 0 0 6px var(--cyan); }
+    50%      { text-shadow: 0 0 16px var(--cyan), 0 0 4px #fff; }
+}
+
+/* 
+   ADAPTACIÓN A CUALQUIER DISPOSITIVO
+*/
+
+/* Base fluida: nada se desborda de su contenedor */
+img {
+    max-width: 100%;
+}
+
+h1, h2, p {
+    overflow-wrap: break-word;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.grupo-letra > section {
+    min-width: 0;
+}
+
+/* El efecto "hover" solo en dispositivos con ratón
+   (en pantallas táctiles se quedaba pegado al tocar) */
+@media (hover: hover) {
+    .btn-letra:hover {
+        color: var(--cyan);
+        background: var(--cyan);
+        transform: translateY(-2px);
+    }
+
+    .grupo-letra > section > article:hover {
+        background: var(--cyan);
+    }
+
+    .grupo-letra article button:hover {
+        background: var(--cyan);
+        transform: translateY(-3px);
+    }
+
+    .grupo-letra article button:hover img {
+        filter: none;
+    }
+
+    .grupo-letra > section > article:hover [class^="descripcion-"] {
+        background: rgba(4, 16, 26, 0.88);
+    }
+
+    footer a:hover {
+        background: var(--cyan);
+        color: #eaffff;
+    }
+}
+
+@media (hover: hover) {
+    .btn-letra.activo:hover {
+        color: #eaffff;
+    }
+}
+
+/* Pantallas táctiles: áreas de toque cómodas (mínimo 44 px) */
+@media (pointer: coarse) {
+    .btn-letra {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    footer a {
+        min-height: 44px;
+    }
+}
+
+/* Monitores grandes y TV */
+@media (min-width: 1500px) {
+    body {
+        font-size: 1.2rem;
+    }
+
+    header,
+    body > section > article,
+    footer,
+    hr {
+        max-width: 1400px;
+    }
+
+    .grupo-letra.activo {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+        gap: 28px;
+    }
+
+    .btn-letra {
+        width: 50px;
+        height: 50px;
+    }
+
+    .grupo-letra article button {
+        width: min(100%, 240px);
+    }
+}
+
+/* Tablets y laptops pequeñas */
+@media (max-width: 1024px) {
+    header {
+        --corte: 20px;
+    }
+
+    .grupo-letra.activo {
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+        gap: 18px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 640px) {
+    body {
+        padding: 0 12px;
+    }
+
+    header {
+        --corte: 16px;
+        margin-top: 16px;
+        padding: 22px 14px 20px;
+    }
+
+    header img {
+        width: min(240px, 70%);
+    }
+
+    hr {
+        margin: 20px auto;
+    }
+
+    body > section > article > div:first-child h2 {
+        padding-left: 12px;
+    }
+
+    /* Abecedario: una sola fila que se desliza con el dedo,
+       siempre visible arriba mientras haces scroll */
+    .abecedario {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 6px;
+        margin: 0 -12px 22px;
+        padding: 10px 12px;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+        mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+    }
+
+    .abecedario::-webkit-scrollbar {
+        display: none;
+    }
+
+    .btn-letra {
+        flex: 0 0 auto;
+        width: 46px;
+        height: 46px;
+        scroll-snap-align: center;
+    }
+
+    .grupo-letra > section > article {
+        --corte: 14px;
+        padding: 20px 14px 22px;
+    }
+
+    .grupo-letra article button {
+        --corte: 16px;
+    }
+
+    footer {
+        margin-top: 32px;
+    }
+}
+
+/* Celulares muy pequeños */
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 1.35rem;
+        letter-spacing: 0.05em;
+    }
+
+    .grupo-letra article > div > p:not([class]) {
+        letter-spacing: 0.08em;
+    }
+
+    .btn-letra {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* Celulares en horizontal (poca altura): la barra no fija para no tapar el contenido */
+@media (max-height: 480px) and (orientation: landscape) {
+    .abecedario {
+        position: static;
+    }
+
+    header {
+        margin-top: 12px;
+        padding-block: 18px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
